@@ -1,0 +1,200 @@
+html{
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1,h2{
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+  
+  
+  h1{
+    font-size: 64px;
+    
+    
+    background: linear-gradient(135deg, coral, darkblue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-size: 100%;
+    -webkit-box-decoration-break: clone;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.15); 
+  }
+  
+  h2{
+    font-size: 24px;
+    
+    background: linear-gradient(135deg, darkseagreen, darksalmon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-size: 100%;
+    -webkit-box-decoration-break: clone;
+  }
+  
+  body{
+    background-color: #111;
+  }
+  
+  h2, h3, h4, h5{
+    padding: 1em 1em 1em;
+  }
+  
+  
+  h3, h4, h5{
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    text-align: center;
+    font-size: 24px;
+    color: darkseagreen;
+  }
+  
+  
+  #question{
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-size: 30px;
+    color: darkseagreen;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 6px 6px 8px ;
+    padding: 25px 75px;
+    width: 450px;
+    background: rgba(255,255,255,0.2)
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0 auto; padding: 0;
+  }
+  :active, :hover, :focus {
+    outline: 0!important;
+    outline-offset: 0;
+  }
+  ::before,
+  ::after {
+    position: absolute;
+    content: "";
+  }
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+    margin: 33px auto 33px;
+  }
+  div.buttons button {
+    position: relative;
+    width: auto; height: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+    min-width: 150px;
+  }
+    div.buttons span {         
+      position: relative;
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      transition: 0.3s;
+    }
+  .buttons span {
+    color: darkseagreen;
+    background-color: rgba(255,255,255,0.2);
+  }
+  .buttons span:hover {
+    color: white;
+  }
+  div.buttons button::before,
+  div.buttons button::after {
+    width: 20%; height: 2px;
+    background-color: white;
+    z-index: 2;
+  }
+  
+  
+  div.buttons button::before,
+  div.buttons button::after {
+    top: 0;
+    transition: width 0.2s 0.35s ease-out;
+  }
+  div.buttons button::before {
+    right: 50%;
+  }
+  div.buttons button::after {
+    left: 50%;
+  }
+  div.buttons button:hover::before,
+  div.buttons button:hover::after {
+    width: 50%;
+    transition: width 0.2s ease-in;   
+  }
+  
+  div.buttons span::before,
+  div.buttons span::after {
+    width: 0%; height: 0%;
+    background: transparent;
+    opacity: 0;
+    z-index: 2;
+    transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s 0.35s;
+  }
+  div.buttons span::before {
+    top: 0; left: 0;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+  div.buttons span::after {
+    top: 0; right: 0;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+  div.buttons span:hover::before,
+  div.buttons span:hover::after {
+    width: 50%; height: 96%;
+    opacity: 1;
+    transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;   
+  }
+  
+  #answer{
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    width: 3em;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 30px;
+  }
+  
+  
+  
+  @media (max-width: 599px) {
+  main{
+  grid-template-columns: 2fr;
+    }
+    .buttons{
+      display: block;
+    }
+    div.buttons button{
+      display: block;
+      margin: 10px auto
+    }
+    
+  }
